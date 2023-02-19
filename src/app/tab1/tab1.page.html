@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,18 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-list [inset]="true" *ngFor="let ticket of allTickets">
+    <ion-item>
+      <ion-label>{{ticket.patientName}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ticket.cpf}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ticket.service}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ticket.urgency}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
