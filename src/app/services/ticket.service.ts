@@ -14,7 +14,7 @@ export class TicketService {
     private http: HttpClient
   ) { }
 
-  listarTickets(): Observable<ITickets[]>{
+  listAllTickets(): Observable<ITickets[]>{
     return this.http.get<ITickets[]>(this.API)
   }
 }

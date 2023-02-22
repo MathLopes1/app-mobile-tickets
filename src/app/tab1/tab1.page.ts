@@ -17,7 +17,7 @@ export class Tab1Page implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.ticketService.listarTickets().subscribe((ticket) => {
+    this.ticketService.listAllTickets().subscribe((ticket) => {
       this.allTickets = ticket;
     })
   }
