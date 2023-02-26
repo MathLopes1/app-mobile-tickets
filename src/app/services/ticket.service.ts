@@ -14,6 +14,10 @@ export class TicketService {
     private http: HttpClient
   ) { }
 
+  createTicket(ticket: ITickets): Observable<ITickets> {
+    return this.http.post<ITickets>(this.API, ticket);
+  }
+
   listAllTickets(): Observable<ITickets[]>{
     return this.http.get<ITickets[]>(this.API)
   }

@@ -7,36 +7,37 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-list>
+
+  <form #ticketForm="ngForm" (ngSubmit)="createTicket()">
     <ion-item>
       <ion-label position="floating">Nome do Paciente: </ion-label>
-      <ion-input placeholder="Enter text"></ion-input>
+      <ion-input placeholder="Enter text" [(ngModel)]="ticket.patientName" name="patientName"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">CPF: </ion-label>
-      <ion-input placeholder="Enter text"></ion-input>
+      <ion-input placeholder="Enter text" [(ngModel)]="ticket.cpf" name="cpf"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Endereço: </ion-label>
-      <ion-input placeholder="Enter text"></ion-input>
+      <ion-input placeholder="Enter text" [(ngModel)]="ticket.address" name="address"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Serviço: </ion-label>
-      <ion-select placeholder="Escolha um serviço">
+      <ion-select placeholder="Escolha um serviço" [(ngModel)]="ticket.service" name="service">
         <ion-select-option value="EXAMS">Exames</ion-select-option>
         <ion-select-option value="MEDICAL_APPOINTMENT">Consulta Médica</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Prioridade: </ion-label>
-      <ion-select placeholder="Escolha um serviço">
+      <ion-select placeholder="Escolha um serviço" [(ngModel)]="ticket.urgency" name="urgency">
         <ion-select-option value="HIGH">Alta</ion-select-option>
         <ion-select-option value="MEDIUM">Média</ion-select-option>
         <ion-select-option value="LOW">Baixa</ion-select-option>
       </ion-select>
     </ion-item>
-  </ion-list>
   <div style="text-align: center; display: flex; align-items: center; justify-content: center; margin-top: 20px;">
-    <ion-button shape="round">Criar</ion-button>
+    <ion-button shape="round" type="submit">Criar</ion-button>
   </div>
+  </form>
 </ion-content>
