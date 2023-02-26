@@ -9,16 +9,28 @@
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-list [inset]="true" *ngFor="let ticket of allTickets">
     <ion-item>
-      <ion-label>{{ticket.patientName}}</ion-label>
+      <div style="display: flex; gap: 8px;">
+        <ion-label style="flex: 1;">Paciente:</ion-label>
+        <ion-label ion-label >{{ticket.patientName}}</ion-label>
+      </div>
     </ion-item>
     <ion-item>
-      <ion-label>{{ticket.cpf}}</ion-label>
+      <div style="display: flex; gap: 8px;">
+        <ion-label style="flex: 1;">CPF:</ion-label>
+        <ion-label>{{ticket.cpf}}</ion-label>
+      </div>
     </ion-item>
     <ion-item>
-      <ion-label>{{ticket.service}}</ion-label>
+      <div style="display: flex; gap: 8px;">
+        <ion-label style="flex: 1;">Serviço:</ion-label>
+        <ion-label>{{ticket.service}}</ion-label>
+      </div>
     </ion-item>
     <ion-item>
-      <ion-label>{{ticket.urgency}}</ion-label>
+      <div style="display: flex; gap: 8px;">
+        <ion-label style="flex: 1;">Urgência:</ion-label>
+        <ion-label>{{ticket.urgency}}</ion-label>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>
