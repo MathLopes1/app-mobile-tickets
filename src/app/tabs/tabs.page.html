@@ -3,13 +3,17 @@
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="list">
       <ion-icon name="ellipse"></ion-icon>
-      <ion-label>Home</ion-label>
+      <ion-label>Listar</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="new">
       <ion-icon name="ellipse"></ion-icon>
-      <ion-label>New</ion-label>
+      <ion-label>criar</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="login" (click)="logout()">
+      <ion-icon name="person-circle"></ion-icon>
+      <ion-label>Logout</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
-
 </ion-tabs>
